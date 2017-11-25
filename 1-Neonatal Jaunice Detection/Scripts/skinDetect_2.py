@@ -27,7 +27,7 @@ while(keyPressed < 0): # any key pressed has a value >= 0
     skinRegion = cv2.inRange(imageYCrCb,min_YCrCb,max_YCrCb)
 
     # Do contour detection on skin region
-    contours, hierarchy = cv2.findContours(skinRegion, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    img2, contours, hierarchy = cv2.findContours(skinRegion, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # Draw the contour on the source image
     for i, c in enumerate(contours):

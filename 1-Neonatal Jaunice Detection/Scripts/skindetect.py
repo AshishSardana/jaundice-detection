@@ -22,7 +22,7 @@ while(keyPressed < 0): # any key pressed has a value >= 0
 
     # Grab video frame, decode it and return next video frame
     # readSucsess, sourceImage = videoFrame.read()
-    sourceImage = cv2.imread('try.jpg')
+    sourceImage = cv2.imread('img_4.jpg')
     # print sourceImage.shape
     
     # Convert image to YCrCb
@@ -38,7 +38,7 @@ while(keyPressed < 0): # any key pressed has a value >= 0
     #cv2.waitKey(0)  
 
     # Do contour detection on skin region
-    contours, hierarchy = cv2.findContours(skinRegion, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    im2, contours, hierarchy = cv2.findContours(skinRegion, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     # Draw the contour on the source image
     for i, c in enumerate(contours):
@@ -48,10 +48,10 @@ while(keyPressed < 0): # any key pressed has a value >= 0
 
     # Display the source image
     cv2.imshow('Camera Output',sourceImage)
-    color_thief = ColorThief('try.jpg')
+    color_thief = ColorThief('img_4.jpg')
     
     dominant_color = color_thief.get_color(quality=1)
-    print dominant_color
+    print (dominant_color)
 
     # Check for user input to close program
     keyPressed = cv2.waitKey(2) # wait 2 millisecond in each iteration of while loop

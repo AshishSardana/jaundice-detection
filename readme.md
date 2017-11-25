@@ -28,20 +28,3 @@ Adopting the same technique for a new born baby, identifying the color of baby's
 1. Click the picture of the baby's face using Raspberry Pi's camera.
 2. The image will be processed and the corresponding LED (Jaundice/Non-Jaundice) glows.
 
-
-
-## Smart Medical Record Collection using Aadhar Card
-
-A person's health is directly affected by the food he/she consume. We devised an automated solution to keep track of the calories a student intakes in a day (separate for each meal).
-
-#### How it works?
-
-1. Student's ID-Card will be read by the RFID after entering the 'mess'. The average calorie of that meal will be added in that student's account.
-2. The calorie count is dependent on the meal (breakfast, lunch, dinner) the student is taking.
-3. This information is saved in the database maintained in an Excel sheet.
-4. Total calorie intake by the student will be calculated every week. If this intake is less than the minimum calorie required by a person of his/her age group, an e-mail will be sent to his/her Proctor informing them about this.
-
-
-
-
-
